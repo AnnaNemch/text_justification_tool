@@ -14,9 +14,14 @@ export class User {
   @Column({ unique: true })
   email: string;
 
-  @Column({ name: "processed_words", nullable: true })
+  @Column({ name: "processed_words", nullable: true, default: 0 })
   processedWords: number;
 
-  @Column({ name: "last_process_date", type: "date", nullable: true, default: null })
+  @Column({
+    name: "last_process_date",
+    type: "date",
+    nullable: true,
+    default: null,
+  })
   lastProcessDate: Date;
 }
