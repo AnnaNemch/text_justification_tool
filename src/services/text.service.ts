@@ -28,7 +28,7 @@ export class TextService {
         currentNumberOfCharacters + spacesCount + wordLength + 1;
 
       if (charactersCount <= NUMBER_OF_CHARACTERS_PER_LINE) {
-        currentLine.push(word);
+        wordLength && currentLine.push(word);
         currentNumberOfCharacters += wordLength;
       } else {
         const spacesToAdd =
