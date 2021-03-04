@@ -2,8 +2,7 @@
   "main": "dist/app.js",
   "scripts": {
     "build": "tsc",
-    "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "dependencies": {
     "body-parser": "^1.19.0",
