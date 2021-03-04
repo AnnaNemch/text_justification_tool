@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
+  workflow_dispatch:  
 
 jobs:
   build-and-deploy:
@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js version
       uses: actions/setup-node@v1
       with:
-        node-version: '10.x'
+        node-version: '14.15.1'
 
     - name: npm install, build, and test
       run: |
