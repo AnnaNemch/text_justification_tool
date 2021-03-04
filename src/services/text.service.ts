@@ -1,8 +1,11 @@
 const NUMBER_OF_CHARACTERS_PER_LINE = 80;
 
 export class TextService {
+  public static getWordsCount(inputText: string) {
+    return inputText.split(/\s+/).length;
+  }
+
   public static justifyText(inputText: string) {
-    console.log(inputText);
     let paragraphs = inputText.split(/[\r?\n]+/);
     paragraphs = paragraphs.map((paragraph) =>
       this.processParagraph(paragraph)
@@ -13,9 +16,6 @@ export class TextService {
   private static processParagraph(inputText: string) {
     const words = inputText.split(/\s+/);
     const justifiedLines: string[] = [];
-
-    console.log("words");
-    console.log(words);
 
     let currentLine: string[] = [];
     let currentNumberOfCharacters = 0;
@@ -47,9 +47,6 @@ export class TextService {
     });
 
     justifiedLines.push(currentLine.join(" ")); // last line
-
-    console.log("justifiedLines");
-    console.log(justifiedLines.join("\n"));
 
     return justifiedLines.join("\n");
   }
