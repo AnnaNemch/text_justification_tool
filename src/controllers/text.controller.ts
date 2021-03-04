@@ -5,7 +5,7 @@ import moment from "moment";
 import { getRepository } from "typeorm";
 import HttpStatusCodes from "http-status-codes";
 
-const MAX_WORDS_ALLOWED_TO_PROCESS = 400;
+const MAX_WORDS_ALLOWED_TO_PROCESS = 80000;
 const DATE_FORMAT = "YYYY-MM-DD";
 
 export default class TextController {
